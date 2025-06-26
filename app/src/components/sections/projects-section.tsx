@@ -19,7 +19,7 @@ const featuredProjects = [
     featured: true,
     techStack: ['Python', 'PyTorch', 'OpenCV', 'FastAPI'],
     links: {
-      github: 'https://github.com/yourusername/neural-style-transfer',
+      github: `${siteConfig.social.github}/neural-style-transfer`,
       demo: 'https://demo.example.com',
     },
     image: '/projects/neural-style.jpg',
@@ -33,7 +33,7 @@ const featuredProjects = [
     featured: true,
     techStack: ['Next.js', 'TypeScript', 'Socket.io', 'PostgreSQL'],
     links: {
-      github: 'https://github.com/yourusername/chat-app',
+      github: `${siteConfig.social.github}/chat-app`,
       demo: 'https://chat.example.com',
     },
     image: '/projects/chat-app.jpg',
@@ -47,7 +47,7 @@ const featuredProjects = [
     featured: true,
     techStack: ['Python', 'Pandas', 'NumPy', 'Plotly'],
     links: {
-      github: 'https://github.com/yourusername/portfolio-optimizer',
+      github: `${siteConfig.social.github}/portfolio-optimizer`,
     },
     image: '/projects/portfolio-optimizer.jpg',
     status: 'in-progress',

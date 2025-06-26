@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail, Instagram } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button'
 /**
  * Hero section component displaying main introduction and call-to-action
  * Features animated text, social links, and scroll indicator
+ * No floating elements to prevent hydration issues
  * 
  * @returns JSX hero section structure
  */
@@ -151,18 +152,6 @@ export function HeroSection() {
           </motion.a>
 
           <motion.a
-            href={siteConfig.social.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors p-2"
-            whileHover={{ scale: 1.1, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Instagram profile"
-          >
-            <Instagram size={24} />
-          </motion.a>
-
-          <motion.a
             href={siteConfig.social.email}
             className="text-muted-foreground hover:text-primary transition-colors p-2"
             whileHover={{ scale: 1.1, y: -2 }}
@@ -193,40 +182,6 @@ export function HeroSection() {
           </motion.button>
         </motion.div>
       </motion.div>
-
-      {/* Floating Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(5)].map((_, i) => {
-          // Use deterministic positions based on index to avoid hydration mismatch
-          const positions = [
-            { left: '15%', top: '20%' },
-            { left: '85%', top: '30%' },
-            { left: '10%', top: '70%' },
-            { left: '90%', top: '60%' },
-            { left: '50%', top: '80%' },
-          ]
-          
-          return (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-primary/20 rounded-full"
-              style={{
-                left: positions[i].left,
-                top: positions[i].top,
-              }}
-              animate={{
-                y: [0, -30, 0],
-                opacity: [0.3, 0.8, 0.3],
-              }}
-              transition={{
-                duration: 3 + i * 0.5, // Vary duration based on index
-                repeat: Infinity,
-                delay: i * 0.4, // Stagger the animations
-              }}
-            />
-          )
-        })}
-      </div>
     </section>
   )
 }

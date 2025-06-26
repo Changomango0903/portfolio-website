@@ -122,29 +122,6 @@
     -webkit-line-clamp: 3;
   }
 
-  /* Glass morphism effect */
-  .glass {
-    @apply backdrop-blur-md bg-background/80 border border-border/50;
-  }
-
-  /* Gradient text */
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent;
-  }
-
-  /* Animation utilities */
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-
-  .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
   /* Screen reader only content */
   .sr-only {
     position: absolute;
@@ -203,27 +180,6 @@
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
 /* Component-specific styles */
 @layer components {
   /* Navigation styles */
@@ -240,37 +196,9 @@
     @apply absolute -bottom-1 left-0 right-0 h-0.5 bg-primary;
   }
 
-  /* Button hover effects */
-  .button-glow {
-    @apply relative overflow-hidden;
-  }
-
-  .button-glow::before {
-    content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 translate-x-[-100%] transition-transform duration-700;
-  }
-
-  .button-glow:hover::before {
-    @apply translate-x-[100%];
-  }
-
   /* Card hover effects */
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-  }
-
-  /* Project card specific styles */
-  .project-card {
-    @apply group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
-  }
-
-  .project-card .project-image {
-    @apply relative overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5;
-  }
-
-  .project-card:hover .project-image::after {
-    content: '';
-    @apply absolute inset-0 bg-primary/10 transition-opacity duration-300;
   }
 
   /* Typography scale */
@@ -292,16 +220,5 @@
 
   .text-small {
     @apply text-sm leading-relaxed;
-  }
-}
-
-/* Print styles */
-@media print {
-  * {
-    @apply text-black bg-white;
-  }
-  
-  .no-print {
-    display: none !important;
   }
 }

@@ -4,35 +4,35 @@
  */
 export const siteConfig = {
   // Basic site information
-  name: 'Your Portfolio',
-  description: 'AI/ML Engineer & Full-Stack Developer passionate about building innovative solutions that solve real-world problems.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://yourportfolio.com',
+  name: 'Changomango Portfolio',
+  description: 'Computer Science Student & Aspiring Software Engineer passionate about AI/ML and building innovative solutions.',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://changomango-portfolio.vercel.app',
   
   // SEO and social media
   keywords: [
     'portfolio',
-    'developer',
+    'computer science',
+    'software engineer',
     'ai engineer',
     'machine learning',
-    'full stack',
-    'react',
     'python',
     'typescript',
+    'react',
     'next.js',
-  ],
+    'student developer',
+  ] as string[],
   
   // Open Graph image for social media sharing
   ogImage: '/og-image.png',
   
   // Author information
   author: {
-    name: 'Sean Chang',
-    email: 'changsean0903@gmail.com',
-    url: 'https://yourportfolio.com',
-    twitter: '@Changomango0903',
+    name: 'Changomango',
+    email: 'changomango@example.com',
+    url: 'https://changomango-portfolio.vercel.app',
+    twitter: '@changomango',
     github: 'https://github.com/Changomango0903',
     linkedin: 'https://linkedin.com/in/changomango',
-    instagram: '@Changomango123',
   },
   
   // Navigation menu items
@@ -63,9 +63,8 @@ export const siteConfig = {
   social: {
     github: 'https://github.com/Changomango0903',
     linkedin: 'https://linkedin.com/in/changomango',
-    twitter: 'https://twitter.com/Changomango0903',
-    instagram: 'https://instagram.com/Changomango123',
-    email: 'mailto:changsean0903@gmail.com',
+    twitter: 'https://twitter.com/changomango',
+    email: 'mailto:changomango@example.com',
   },
   
   // Project categories for filtering
@@ -104,34 +103,34 @@ export const siteConfig = {
   skillCategories: [
     {
       name: 'Programming Languages',
-      skills: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C++'],
+      skills: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C++'],
     },
     {
       name: 'Frameworks & Libraries',
-      skills: ['React', 'Next.js', 'FastAPI', 'Django', 'PyTorch', 'TensorFlow'],
+      skills: ['React', 'Next.js', 'Node.js', 'Express', 'Django'],
     },
     {
       name: 'Tools & Platforms',
-      skills: ['Docker', 'AWS', 'Vercel', 'Git', 'PostgreSQL', 'MongoDB'],
+      skills: ['Git', 'Docker', 'AWS', 'Vercel', 'Linux', 'VS Code'],
     },
     {
-      name: 'Specializations',
-      skills: ['Machine Learning', 'Data Science', 'System Design', 'DevOps'],
+      name: 'Areas of Interest',
+      skills: ['Machine Learning', 'Web Development', 'Data Structures', 'Algorithms'],
     },
   ],
   
   // Contact form configuration
   contact: {
-    email: 'your.email@example.com',
+    email: 'changomango@example.com',
     location: 'Your City, Country',
-    timezone: 'UTC-5',
-    availability: 'Available for freelance and full-time opportunities',
+    timezone: 'UTC+/-X',
+    availability: 'Available for internships and entry-level positions',
   },
   
   // Analytics and tracking
   analytics: {
     google: process.env.NEXT_PUBLIC_GA_ID,
-    vercel: true, // Vercel Analytics is enabled in layout
+    vercel: true,
   },
   
   // Feature flags
@@ -140,7 +139,7 @@ export const siteConfig = {
     darkMode: true,
     contactForm: true,
     analytics: true,
-    comments: false, // For blog posts
+    comments: false,
   },
 } as const
 

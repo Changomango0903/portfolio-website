@@ -1,14 +1,6 @@
 import * as React from 'react'
-
 import { cn } from '@/lib/utils'
 
-/**
- * Card component for displaying content in a contained, elevated surface
- * 
- * @param className - Additional CSS classes
- * @param props - Additional div props
- * @returns JSX card container
- */
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -24,13 +16,6 @@ const Card = React.forwardRef<
 ))
 Card.displayName = 'Card'
 
-/**
- * Card header component for titles and descriptions
- * 
- * @param className - Additional CSS classes
- * @param props - Additional div props
- * @returns JSX card header
- */
 const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -43,13 +28,6 @@ const CardHeader = React.forwardRef<
 ))
 CardHeader.displayName = 'CardHeader'
 
-/**
- * Card title component for main headings
- * 
- * @param className - Additional CSS classes
- * @param props - Additional heading props
- * @returns JSX card title
- */
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
@@ -65,13 +43,6 @@ const CardTitle = React.forwardRef<
 ))
 CardTitle.displayName = 'CardTitle'
 
-/**
- * Card description component for subtitle text
- * 
- * @param className - Additional CSS classes
- * @param props - Additional paragraph props
- * @returns JSX card description
- */
 const CardDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
@@ -84,13 +55,6 @@ const CardDescription = React.forwardRef<
 ))
 CardDescription.displayName = 'CardDescription'
 
-/**
- * Card content component for main body content
- * 
- * @param className - Additional CSS classes
- * @param props - Additional div props
- * @returns JSX card content area
- */
 const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -99,13 +63,6 @@ const CardContent = React.forwardRef<
 ))
 CardContent.displayName = 'CardContent'
 
-/**
- * Card footer component for actions and additional content
- * 
- * @param className - Additional CSS classes
- * @param props - Additional div props
- * @returns JSX card footer
- */
 const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>

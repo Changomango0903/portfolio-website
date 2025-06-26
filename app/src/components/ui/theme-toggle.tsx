@@ -7,17 +7,10 @@ import { motion } from 'framer-motion'
 
 import { Button } from '@/components/ui/button'
 
-/**
- * Theme toggle component for switching between light and dark modes
- * Uses next-themes for theme management with smooth animations
- * 
- * @returns JSX theme toggle button
- */
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = React.useState(false)
 
-  // Avoid hydration mismatch
   React.useEffect(() => {
     setMounted(true)
   }, [])
