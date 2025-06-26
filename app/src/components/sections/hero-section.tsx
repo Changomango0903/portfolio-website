@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Mail, Instagram } from 'lucide-react'
 import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button'
 
 /**
  * Hero section component displaying main introduction and call-to-action
- * Features animated text, social links, and scroll indicator
+ * Features animated text, social links (including Instagram), and scroll indicator
  * No floating elements to prevent hydration issues
  * 
  * @returns JSX hero section structure
@@ -66,63 +66,49 @@ export function HeroSection() {
         initial="hidden"
         animate="visible"
       >
-        {/* Greeting */}
-        <motion.p
-          variants={itemVariants}
-          className="text-lg sm:text-xl text-muted-foreground mb-4"
-        >
-          Hello, I'm
-        </motion.p>
+        {/* Main Heading */}
+        <motion.div variants={itemVariants}>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
+            Hi, I'm{' '}
+            <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              {siteConfig.author.name}
+            </span>
+          </h1>
+        </motion.div>
 
-        {/* Name */}
-        <motion.h1
+        {/* Subtitle */}
+        <motion.p 
           variants={itemVariants}
-          className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6"
-        >
-          <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-            {siteConfig.author.name}
-          </span>
-        </motion.h1>
-
-        {/* Title/Role */}
-        <motion.h2
-          variants={itemVariants}
-          className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
+          className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
         >
           {siteConfig.description}
-        </motion.h2>
+        </motion.p>
 
-        {/* CTA Buttons */}
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-        >
-          <Button
-            size="lg"
-            onClick={handleScrollToProjects}
-            className="group relative overflow-hidden"
+        {/* Call to Action Buttons */}
+        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <Button 
+            asChild 
+            size="lg" 
+            className="text-lg px-8 py-6 h-auto"
           >
-            <span className="relative z-10">Explore My Work</span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10"
-              initial={{ x: '-100%' }}
-              whileHover={{ x: '100%' }}
-              transition={{ duration: 0.6 }}
-            />
+            <Link href="#projects">
+              View My Projects
+            </Link>
           </Button>
-
-          <Button
-            variant="outline"
-            size="lg"
-            asChild
+          
+          <Button 
+            asChild 
+            variant="outline" 
+            size="lg" 
+            className="text-lg px-8 py-6 h-auto"
           >
-            <Link href="/contact">
+            <Link href="#contact">
               Get In Touch
             </Link>
           </Button>
         </motion.div>
 
-        {/* Social Links */}
+        {/* Social Links - Updated to include Instagram */}
         <motion.div
           variants={itemVariants}
           className="flex justify-center space-x-6 mb-16"
@@ -149,6 +135,19 @@ export function HeroSection() {
             aria-label="LinkedIn profile"
           >
             <Linkedin size={24} />
+          </motion.a>
+
+          {/* New Instagram Link */}
+          <motion.a
+            href={siteConfig.social.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors p-2"
+            whileHover={{ scale: 1.1, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label="Instagram profile"
+          >
+            <Instagram size={24} />
           </motion.a>
 
           <motion.a

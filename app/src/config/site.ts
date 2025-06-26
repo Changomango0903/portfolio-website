@@ -4,7 +4,7 @@
  */
 export const siteConfig = {
   // Basic site information
-  name: 'Changomango Portfolio',
+  name: 'Sean\'s Portfolio',
   description: 'Computer Science Student & Aspiring Software Engineer passionate about AI/ML and building innovative solutions.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://changomango-portfolio.vercel.app',
   
@@ -27,12 +27,13 @@ export const siteConfig = {
   
   // Author information
   author: {
-    name: 'Changomango',
+    name: 'Sean Chang',
     email: 'changomango@example.com',
     url: 'https://changomango-portfolio.vercel.app',
     twitter: '@changomango',
     github: 'https://github.com/Changomango0903',
     linkedin: 'https://linkedin.com/in/changomango',
+    instagram: 'https://instagram.com/Changomango123', // Added Instagram URL
   },
   
   // Navigation menu items
@@ -59,12 +60,13 @@ export const siteConfig = {
     },
   ],
   
-  // Social media links
+  // Social media links - Added Instagram here
   social: {
     github: 'https://github.com/Changomango0903',
     linkedin: 'https://linkedin.com/in/changomango',
     twitter: 'https://twitter.com/changomango',
     email: 'mailto:changomango@example.com',
+    instagram: 'https://instagram.com/Changomango123', // Added Instagram social link
   },
   
   // Project categories for filtering
