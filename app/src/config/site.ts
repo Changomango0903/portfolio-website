@@ -26,13 +26,13 @@ export const siteConfig = {
   
   // Author information
   author: {
-    name: 'xxxxxxxxxx',
-    email: 'xxxxxxxxxx@gmail.com',
+    name: 'Sean Chang',
+    email: 'changsean0903@gmail.com',
     url: 'https://yourportfolio.com',
-    twitter: '@xxxxxxxxxx',
-    github: 'https://github.com/xxxxxxxxxx',
-    linkedin: 'https://linkedin.com/in/xxxxxxxxxx',
-    instagram: '@xxxxxxxxxx',
+    twitter: '@Changomango0903',
+    github: 'https://github.com/Changomango0903',
+    linkedin: 'https://linkedin.com/in/changomango',
+    instagram: '@Changomango123',
   },
   
   // Navigation menu items
@@ -61,11 +61,11 @@ export const siteConfig = {
   
   // Social media links
   social: {
-    github: 'https://github.com/xxxxxxxxx',
-    linkedin: 'https://linkedin.com/in/xxxxxxxxxx',
-    twitter: 'https://twitter.com/xxxxxxxxxx',
-    instagram: 'https://instagram.com/xxxxxxxxxx',
-    email: 'mailto:xxxxxxxxxx@gmail.com',
+    github: 'https://github.com/Changomango0903',
+    linkedin: 'https://linkedin.com/in/changomango',
+    twitter: 'https://twitter.com/Changomango0903',
+    instagram: 'https://instagram.com/Changomango123',
+    email: 'mailto:changsean0903@gmail.com',
   },
   
   // Project categories for filtering
