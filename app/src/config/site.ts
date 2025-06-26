@@ -30,7 +30,7 @@ export const siteConfig = {
     name: 'Sean Chang',
     email: 'changomango@example.com',
     url: 'https://changomango-portfolio.vercel.app',
-    twitter: '@changomango',
+    twitter: '@Changomango0903',
     github: 'https://github.com/Changomango0903',
     linkedin: 'https://linkedin.com/in/changomango',
     instagram: 'https://instagram.com/Changomango123', // Added Instagram URL
@@ -64,7 +64,7 @@ export const siteConfig = {
   social: {
     github: 'https://github.com/Changomango0903',
     linkedin: 'https://linkedin.com/in/changomango',
-    twitter: 'https://twitter.com/changomango',
+    twitter: 'https://twitter.com/Changomango0903',
     email: 'mailto:changomango@example.com',
     instagram: 'https://instagram.com/Changomango123', // Added Instagram social link
   },
