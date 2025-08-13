@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 import { HeroSection } from '@/components/sections/hero-section'
 import { ProjectsSection } from '@/components/sections/projects-section'
+import { BlogSection } from '@/components/sections/blog-section'
 import { SkillsSection } from '@/components/sections/skills-section'
 import { ContactSection } from '@/components/sections/contact-section'
 import { siteConfig } from '@/config/site'
@@ -34,7 +35,8 @@ export default function HomePage() {
       
       {/* Technical skills and expertise */}
       <SkillsSection />
-      
+      {/* Latest blog posts and articles */}
+      <BlogSection />
       {/* Contact information and form */}
       <ContactSection />
     </>
